@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Food - Lẩu Thái Chua Cay</title>
+  <style>
+    /* Toàn bộ trang web - Tone màu ấm áp, kích thích thèm ăn */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #fff9f5;
+      color: #333;
+    }
+
+    /* Header bùng nổ với sắc đỏ - cam của ớt và nước lẩu */
+    header {
+      background: linear-gradient(135deg, #e74c3c, #e67e22);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      margin: 10px 0 0 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Container bọc nội dung chính */
+    .container {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Khối hình ảnh nổi bật */
+    .food-banner {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .food-banner img {
+      width: 100%;
+      max-height: 450px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      border: 5px solid #fff;
+    }
+
+    /* Định dạng chung cho các vùng nội dung */
+    section {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border-left: 6px solid #e74c3c; /* Vạch đỏ nhấn mạnh đặc trưng Thái */
+    }
+
+    /* Tiêu đề các mục - Màu xanh lá chanh/Sả để cân bằng vị giác */
+    h2 {
+      color: #27ae60;
+      margin-top: 0;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Danh sách nguyên liệu dạng lưới (Grid) nhìn cho hiện đại */
+    .ingredients-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .ingredients-list li {
+      background: #fff5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-bottom: 2px solid #ffdede;
+    }
+
+    /* Các bước chế biến dạng số thứ tự nổi bật */
+    .steps-list {
+      padding-left: 0;
+      list-style: none;
+      counter-reset: step-counter;
+    }
+
+    .steps-list li {
+      position: relative;
+      padding-left: 50px;
+      margin-bottom: 20px;
+    }
+
+    /* Tạo vòng tròn số đếm màu đỏ cam */
+    .steps-list li::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      background: linear-gradient(135deg, #e67e22, #e74c3c);
+      color: white;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(231, 76, 60, 0.3);
+    }
+
+    /* Khối mẹo nhỏ/Lưu ý */
+    .tip-box {
+      background-color: #e8f8f5;
+      border-left: 6px solid #2ecc71;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    /* Footer nhẹ nhàng cuối trang */
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Lẩu Thái Chua Cay</h1>
+  <p>Hương vị nồng nàn - Chuẩn vị xứ Chùa Vàng</p>
+</header>
+
+<div class="container">
+
+  <div class="food-banner">
+    <img src="https://cdn.tgdd.vn/Files/2019/07/26/1181815/lau-thai-hai-san-chua-chua-cay-cay-danh-bay-cai-lanh-202111161130260017.jpg" alt="Nồi lẩu Thái chua cay hải sản đầy đặn">
+  </div>
+
+  <section>
+    <h2>🌶️ Nguyên Liệu Chuẩn Bị</h2>
+    <ul class="ingredients-list">
+      <li><strong>Hải sản:</strong> Tôm, mực, ngao</li>
+      <li><strong>Thịt bắp bò</strong> thái mỏng</li>
+      <li><strong>Gia vị thơm:</strong> Sả, riềng, lá chanh, ớt</li>
+      <li><strong>Rau củ:</strong> Cà chua, nấm kim châm, nấm muồng</li>
+      <li><strong>Nước dùng:</strong> Xương ống heo</li>
+      <li><strong>Gói gia vị:</strong> Sốt lẩu Thái Tomyum</li>
+      <li><strong>Nước cốt dừa</strong> (tạo độ béo ngậy)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍋 Sơ Chế Nguyên Liệu</h2>
+    <p><strong>Bước quan trọng để nước lẩu thơm, không bị tanh:</strong></p>
+    <ul>
+      <li>Hải sản rửa sạch với nước muối loãng, mực cắt miếng vừa ăn, tôm cắt bớt râu.</li>
+      <li>Sả đập dập cắt khúc. Riềng cạo vỏ thái lát mỏng. Lá chanh vò sơ cho thơm.</li>
+      <li>Cà chua bổ múi cau. Các loại rau nấm rửa sạch, để ráo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🍲 Các Bước Thực Hiện</h2>
+    <ul class="steps-list">
+      <li>
+        <strong>Nấu nước dùng:</strong> Ninh xương ống heo khoảng 1 tiếng để lấy nước ngọt tự nhiên, vớt bọt liên tục để nước trong.
+      </li>
+      <li>
+        <strong>Xào hương liệu:</strong> Đun nóng một ít dầu ăn, cho sả, riềng, cà chua vào phi thơm cho dậy mùi và tạo màu sắc đẹp mắt.
+      </li>
+      <li>
+        <strong>Pha nước lẩu Thái:</strong> Đổ nước dùng xương vào nồi hương liệu vừa xào. Thêm gói sốt lẩu Thái, lá chanh vào đun sôi.
+      </li>
+      <li>
+        <strong>Hoàn thiện:</strong> Nêm nếm lại gia vị (đường, hạt nêm, nước mắm) cho vừa vị chua - cay - mặn - ngọt. Thêm một chút nước cốt dừa nếu muốn nước lẩu có độ béo ngậy chuẩn Tomyum.
+      </li>
+      <li>
+        <strong>Thưởng thức:</strong> Chuyển nước lẩu sang bếp mini tại bàn. Thả tôm, mực, ngao, bò và rau nấm vào nhúng chín tới và thưởng thức khi còn nóng hổi!
+      </li>
+    </ul>
+
+    <div class="tip-box">
+      <strong>💡 Mẹo nhỏ:</strong> Đừng cho lá chanh vào quá sớm hoặc đun quá lâu, nước lẩu có thể bị đắng nhẹ. Cho vào trước khi tắt bếp hoặc khi chuẩn bị ăn là ngon nhất!
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 My-food | Góc Bếp Nhỏ Nấu Món Ngon</p>
+</footer>
+
+</body>
+</html>
