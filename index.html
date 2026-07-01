@@ -97,6 +97,25 @@
       border-bottom: 2px solid #ffdede;
     }
 
+    /* TỪNG NGUYÊN LIỆU: Cấu hình hiệu ứng chuyển động */
+    .ingredients-list li {
+      background: #fff5f5;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-bottom: 2px solid #ffdede;
+      cursor: pointer;
+      /* Thiết lập thời gian chuyển đổi mượt mà khi di chuột */
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    /* HIỆU ỨNG DI CHUỘT (HOVER) VÀO NGUYÊN LIỆU */
+    .ingredients-list li:hover {
+      transform: translateY(-5px) scale(1.02); /* Nhấc nhẹ lên trên và phóng to 2% */
+      background: #ffe3e3; /* Màu nền chuyển sang hồng đậm hơn */
+      border-bottom-color: #e74c3c; /* Đường viền dưới chuyển sang màu đỏ ớt */
+      box-shadow: 0 10px 20px rgba(231, 76, 60, 0.15); /* Đổ bóng mềm mại sắc đỏ */
+    }
+
     /* Các bước chế biến dạng số thứ tự nổi bật */
     .steps-list {
       padding-left: 0;
